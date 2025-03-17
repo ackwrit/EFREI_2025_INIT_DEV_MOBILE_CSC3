@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "540820108752",
+    "project_id": "efrei-init-01",
+    "storage_bucket": "efrei-init-01.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540820108752:android:c67b4e9a2b870f5148f5d5",
+        "android_client_info": {
+          "package_name": "com.example.efrei_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByHBbZIDennQRTAdnzKhiMG2ELCAJxVcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540820108752:android:28946a33fdc1434b48f5d5",
+        "android_client_info": {
+          "package_name": "com.lighphoenix.efrei_init_01"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByHBbZIDennQRTAdnzKhiMG2ELCAJxVcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
