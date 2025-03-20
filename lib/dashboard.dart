@@ -8,13 +8,42 @@ class MyDashBoard extends StatefulWidget {
 }
 
 class _MyDashBoardState extends State<MyDashBoard> {
+  //variables
+  int indexCurrent = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Deuxième application"),
       ),
-      body: Text("coucou"),
+      body: selected(),
+      bottomNavigationBar: BottomNavigationBar(
+          onTap: (value) {
+            setState(() {
+              indexCurrent = value;
+            });
+          },
+          currentIndex: indexCurrent,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profil"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.chat_bubble), label: "Messagerie"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.settings), label: "Paramètres"),
+          ]),
     );
+  }
+
+  Widget selected() {
+    switch (indexCurrent) {
+      case 0:
+        return Text("Profil");
+      case 1:
+        return Text("chat");
+      case 2:
+        return Text("paramètres");
+      default:
+        return Text("Défault");
+    }
   }
 }

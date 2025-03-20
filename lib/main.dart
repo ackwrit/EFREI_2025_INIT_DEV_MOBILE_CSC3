@@ -69,6 +69,26 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController mail = TextEditingController();
   TextEditingController password = TextEditingController();
 
+  //méthode
+  errorShow() {
+    return showDialog(
+        barrierDismissible: false,
+        context: context,
+        builder: (context) {
+          return AlertDialog.adaptive(
+            title: Text("Erreur"),
+            content: Text("Erreur lors de la saisie du mail/password"),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text("OK")),
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -134,6 +154,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           MaterialPageRoute(
                               builder: (context) => MyDashBoard()));
                     });
+                  }).catchError((onError) {
+                    errorShow();
                   });
                 },
                 child: Text("Connexion")),
