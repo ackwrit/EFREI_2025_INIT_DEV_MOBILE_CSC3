@@ -18,9 +18,9 @@ class MyUser {
     Map<String, dynamic> map = snapshot.data() as Map<String, dynamic>;
     nom = map["NOM"];
     email = map["EMAIL"];
-    DateTime? provisoire = map["BIRTHDAY"];
+    Timestamp? provisoire = map["BIRTHDAY"];
     if (provisoire != null) {
-      birthday = provisoire;
+      birthday = provisoire.toDate();
     } else {
       birthday = DateTime.now();
     }

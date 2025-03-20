@@ -6,6 +6,13 @@ class FirebasHelper {
   final auth = FirebaseAuth.instance;
   final cloudUsers = FirebaseFirestore.instance.collection("UTILISATEURS");
 
+  Future<MyUser> connexion(String email, String password) async {
+    UserCredential credential =
+        await auth.signInWithEmailAndPassword(email: email, password: password);
+    String uid = credential.user!.uid;
+    return getUser(uid);
+  }
+
   Future<MyUser> inscription(String email, String password) async {
     UserCredential credential = await auth.createUserWithEmailAndPassword(
         email: email, password: password);

@@ -1,3 +1,5 @@
+import 'package:efrei_application/controller/firebaseHelper.dart';
+import 'package:efrei_application/controller/globale.dart';
 import 'package:efrei_application/dashboard.dart';
 import 'package:efrei_application/my_animation.dart';
 import 'package:flutter/material.dart';
@@ -122,8 +124,17 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MyDashBoard()));
+                  FirebasHelper()
+                      .connexion(mail.text, password.text)
+                      .then((value) {
+                    setState(() {
+                      moi = value;
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MyDashBoard()));
+                    });
+                  });
                 },
                 child: Text("Connexion")),
             SizedBox(
@@ -131,7 +142,17 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextButton(
                 onPressed: () {
-                  print("inscription");
+                  FirebasHelper()
+                      .inscription(mail.text, password.text)
+                      .then((value) {
+                    setState(() {
+                      moi = value;
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MyDashBoard()));
+                    });
+                  });
                 },
                 child: Text("Inscription")),
           ]),
