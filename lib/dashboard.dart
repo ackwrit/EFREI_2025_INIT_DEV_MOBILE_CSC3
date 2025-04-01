@@ -18,6 +18,9 @@ class _MyDashBoardState extends State<MyDashBoard> {
       ),
       body: selected(),
       bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.purple,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.black,
           onTap: (value) {
             setState(() {
               indexCurrent = value;
