@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/skweel/Downloads/developpement/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/skweel/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Volumes/samsung/formation/cours_ecole/flutter/cours/EFREI_2025_INIT_DEV_MOBILE_CSC3/android/app/.cxx/Debug/3z1j5o1q/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/skweel/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Volumes/samsung/formation/cours_ecole/flutter/cours/EFREI_2025_INIT_DEV_MOBILE_CSC3/android/app/.cxx/Debug/3z1j5o1q/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
