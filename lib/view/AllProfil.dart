@@ -1,4 +1,5 @@
 import 'package:efrei_application/controller/firebaseHelper.dart';
+import 'package:efrei_application/controller/globale.dart';
 import 'package:efrei_application/model/myUser.dart';
 import 'package:flutter/material.dart';
 
@@ -30,10 +31,23 @@ class _AllProfilState extends State<AllProfil> {
                   itemCount: documents.length,
                   itemBuilder: (contex, index) {
                     MyUser user = MyUser.bdd(documents[index]);
-                    return ListTile(
-                      title: Text(user.email),
-                      subtitle: Text(user.nom),
-                    );
+                    if (moi.id == user.id) {
+                      return SizedBox();
+                    } else {
+                      return Card(
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5)),
+                        child: ListTile(
+                          leading: CircleAvatar(
+                            radius: 20,
+                            backgroundImage: NetworkImage(user.avatar),
+                          ),
+                          title: Text(user.email),
+                          subtitle: Text(user.nom),
+                        ),
+                      );
+                    }
                   });
             }
           }

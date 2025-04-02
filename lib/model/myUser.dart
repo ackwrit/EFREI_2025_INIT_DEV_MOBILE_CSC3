@@ -27,4 +27,9 @@ class MyUser {
       birthday = DateTime.now();
     }
   }
+
+  Map<String, dynamic> toMap() {
+    Map<String, dynamic> data;
+    return data = {"NOM": nom, "EMAIL": email, "BIRTHDAY": birthday};
+  }
 }
