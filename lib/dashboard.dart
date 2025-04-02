@@ -1,3 +1,4 @@
+import 'package:efrei_application/view/AllProfil.dart';
 import 'package:efrei_application/view/MyProfil.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +44,7 @@ class _MyDashBoardState extends State<MyDashBoard> {
       case 0:
         return Myprofil();
       case 1:
-        return Text("chat");
+        return AllProfil();
       case 2:
         return Text("paramètres");
       default:
