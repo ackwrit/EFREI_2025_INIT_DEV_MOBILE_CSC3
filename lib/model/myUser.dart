@@ -1,9 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:efrei_application/controller/globale.dart';
 
 class MyUser {
   late String id;
   late String nom;
   late String email;
+  String avatar = imageUrl;
   DateTime? birthday;
 
   MyUser() {
