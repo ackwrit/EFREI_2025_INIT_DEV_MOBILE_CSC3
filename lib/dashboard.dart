@@ -1,3 +1,4 @@
+import 'package:efrei_application/view/MyProfil.dart';
 import 'package:flutter/material.dart';
 
 class MyDashBoard extends StatefulWidget {
@@ -40,7 +41,7 @@ class _MyDashBoardState extends State<MyDashBoard> {
   Widget selected() {
     switch (indexCurrent) {
       case 0:
-        return Text("Profil");
+        return Myprofil();
       case 1:
         return Text("chat");
       case 2:
