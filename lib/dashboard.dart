@@ -28,7 +28,7 @@ class _MyDashBoardState extends State<MyDashBoard> {
           },
           currentIndex: indexCurrent,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profil"),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Moi"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.chat_bubble), label: "Messagerie"),
             BottomNavigationBarItem(
